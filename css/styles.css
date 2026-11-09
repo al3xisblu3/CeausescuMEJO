@@ -1,0 +1,205 @@
+﻿/* Mobile styles come first. */
+body {
+    margin: 0;
+    background-color: #faf9f6;
+    color: #222222;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #cccccc;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #002b7f;
+    padding: 4px 0;
+}
+
+/* Underlining identifies the current page and keyboard focus. */
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+.year-box {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 25px;
+    background: linear-gradient(
+        to right,
+        #002B7F 33.33%,
+        #FCD116 33.33%,
+        #FCD116 66.66%,
+        #CE1126 66.66%
+    );
+}
+
+/* A light background keeps the year readable over the flag. */
+.year-box span {
+    background-color: #faf9f6;
+    padding: 0 8px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.main-title {
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    font-family: Georgia, serif;
+    margin: 30px 0;
+}
+
+/* Photos shrink to fit the screen without being stretched. */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+a {
+    color: #002b7f;
+}
+
+a:focus {
+    outline: 2px solid #002b7f;
+    outline-offset: 4px;
+}
+
+/* Keyboard users can jump past the menu. */
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    padding: 8px;
+    background-color: white;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+figure {
+    margin: 0 0 30px;
+}
+
+figcaption,
+.disclosure,
+.sources,
+.media-credit,
+footer {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555555;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+article {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 32px 0 16px;
+}
+
+.story-links li,
+.timeline li {
+    margin-bottom: 12px;
+}
+
+/* A red border connects the dates into a simple timeline. */
+.timeline {
+    border-left: 4px solid #ce1126;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.timeline ol {
+    padding-left: 24px;
+}
+
+/* Padding reserves a 16:9 rectangle for the video. */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.media-credit {
+    margin-top: 12px;
+}
+
+.sources,
+.next-page {
+    border-top: 1px solid #cccccc;
+    padding-top: 20px;
+    margin-top: 32px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    padding: 24px 20px;
+}
+
+/* Larger screens have more space for headlines and navigation. */
+@media (min-width: 768px) {
+    nav {
+        gap: 30px;
+    }
+
+    main {
+        padding: 0 40px 60px;
+    }
+
+    .main-title {
+        font-size: 48px;
+        margin: 40px 0;
+    }
+}
